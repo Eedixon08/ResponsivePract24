@@ -1,0 +1,66 @@
+/* Css Variables */
+:root {
+    --colorOne: purple;
+    --colorTwo: orange;
+    --colorThree: blue;
+
+}
+
+/* App;y Border-box to page */
+/* * is a universal selector (the entire HTML file) */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* This will help to center items along main and cross axis */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Mobile First */
+main {
+    width: 300px;
+    border: 1px dashed black;
+    text-align: center;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.box1 {
+    background-color: var(--colorOne);
+}
+
+.box2 {
+    background-color: var(--colorTwo);
+}
+
+.box3 {
+    background-color: var(--colorThree);
+}
+
+
+@media(min-width:500px) {
+    main {
+        flex-direction: row;
+    }
+
+    .box1 {
+        width: 100%;
+    }
+
+    .box2,
+    .box3 {
+        /* width: 50%; */
+        flex: 1;
+    }
+
+    .subBox {
+        display: flex;
+        width: 100%;
+    }
+}
